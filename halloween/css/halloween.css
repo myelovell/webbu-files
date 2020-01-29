@@ -1,0 +1,118 @@
+/*2019-10-22, halloween hemsida*/
+body{
+    font-family:"Trebuchet MS", Helvetica, sans-serif;
+    background-color: black;
+}
+
+container {
+    display: grid;
+    height: 97.5vh;
+    width: auto;
+    grid-template-columns:1fr 3fr;
+    grid-template-rows: 2fr 1.25fr 5fr 3fr;
+    grid-template-areas:
+    'hd hd'
+    'nv nv'
+    'as sc'
+    'ft ft'
+}
+
+header {
+    grid-area:hd ;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 100px 100px 20px 20px;
+    padding: 15px 20px 15px 75px;
+    background-color: #ff6a00;
+    margin-bottom:4px;
+}
+
+.p {
+    position: absolute;
+    text-align: center;
+    color: red;
+    font-weight:700;
+}
+#pumpkin {
+    margin-left: 80%;
+    width: 75px;
+    height: auto;
+    animation: pumpkin 5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes pumpkin {
+    from {margin-left: 80%;
+        tranform:rotate(0deg);}
+    to {margin-left: 0%;
+        transform: rotate(360deg);}
+}
+
+nav {
+    grid-area:nv ;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 20px 20px 0px 20px;
+    padding: 15px 20px 15px 20px;
+    background-color: #ff6a00;
+}
+
+#bat1 {
+    padding: 2px 0px 0px 0px;
+    width: auto;
+    height: 30px;
+}
+
+#g {
+    padding: 2px 0px 0px 0px;
+    width: auto;
+    height: 30px;
+}
+
+#bat2 {
+    padding: 2px 0px 0px 0px;
+    width: auto;
+    height: 30px;
+}
+
+section {
+    grid-area:sc ;
+    border-style: solid;
+    border-width: 3px 2px 3px 0px;
+    border-color: black;
+    padding: 15px 20px 15px 20px;
+    background-color: #ffae00;
+}
+
+aside {
+    grid-area:as ;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ff6a00;
+    border-radius: 20px;
+    background-color: black;
+    margin: 4px 4px 4px 0px;
+    padding: 0px 5px 0px 5px;
+}
+
+#skelpump {
+    width: 425px;
+    height: 300px;
+}
+
+footer {
+    grid-area:ft ;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 20px 0px 0px 0px;
+    background-color: red;
+    padding: 0px 20px 0px 10px;
+}
+
+#blood{
+    padding: 2px 0px 0px 0px;
+    width: 49.5%;
+    height: 200px;
+}
