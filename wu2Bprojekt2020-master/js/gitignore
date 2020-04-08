@@ -1,0 +1,13 @@
+#find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
+
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+**/._.DS_Store
+**/.DS_Store
+._.DS_Store
+.DS_Store
+
