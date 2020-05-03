@@ -4,44 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TOFU</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/tofuMeny.css">
+    <title>Book Reader</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <div class="menu">
-        <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-            <li>Item 5</li>
+        <ul class="settingslist">
+            <li class="listtext">Välj bok</li>
+            <li class="listtext">Beskrivning</li>
+            <li class="listtext">Kategori</li>
+            <li class="listtext">Spara</li>
+            <li class="listtext">Infoga</li>
+            <li class="listtext">Radera</li>
+        </ul>
+    </div>
+
+    <div class="settings-fade-layer"></div>
+
+    <div class="page">
+        <ul class="settingslist">
+            <li class="settingstext">Språk</li>
+            <li class="settingstext">Färgtema</li>
+            <li class="settingstext">Plats</li>
+            <li class="settingstext">Rapportera ett problem</li>
+            <li class="settingstext">Kontakta oss</li>
+            <li class="settingstext">Logga ut</li>
         </ul>
     </div>
 
     <div class="fade-layer"></div>
-
-    <div class="wrapper">
-
-        <div class="menu-button">
-            <i class="material-icons">menu</i>
-        </div>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p>Voluptatem consequatur laudantium quos cum distinctio excepturi.</p>
-        <p>Dicta neque.</p>
-        <p>Autem nihil voluptate minima.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <p>Itaque quisquam numquam veniam exercitationem est ab repellendus aut.</p>
-        <p>Voluptatem consequatur laudantium quos cum distinctio excepturi.</p>
-        <p>Dicta neque. </p>
-        <p>Autem nihil voluptate minima. </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    <div id="containerw">
+        <header id="headerw">
+            <img src="/img/Sidebar.png" alt="Sidebar" id="sidebar">
+            <input type="text" id="title">
+            <img src="/img/Settings.png" alt="Settingsw" class="settings">
+        </header>
+        <main id="mainw">
+            <input type="text" id="textwrite">
+        </main>
+        <nav>
+            <div class="navdiv">
+                <a href="index.html"><img src="/img/Home.png" alt="Home with line" class="navbutton"></a>
+                <p class="navtext">Home</p>
+            </div>
+            <div class="navdiv">
+                <a href="write.html"><img src="/img/Write_Line.png" alt="Pen" class="navbutton"></a>
+                <p class="navtext">Write</p>
+            </div>
+            <div class="navdiv">
+                <a href="favorite.html"><img src="/img/Star.png" alt="Star" class="navbutton"></a>
+                <p class="navtext">Favorites</p>
+            </div>
+            <div class="navdiv">
+                <a href="profile.html"><img src="/img/User.png" alt="User icon" class="navbutton"></a>
+                <p class="navtext">Profile</p>
+            </div>
+        </nav>
+        <footer>
+            <p class="footertext">Book</p>
+            <img src="/img/Ikon.png" alt="bookikon" id="bookikon">
+            <p class="footertext">Reader</p>
+        </footer>
     </div>
-    <script src="js/tofuMeny.js"></script>
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/settings.js"></script>
 </body>
 </html>
