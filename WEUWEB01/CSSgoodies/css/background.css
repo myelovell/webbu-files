@@ -1,0 +1,35 @@
+section#backgrounds {
+  display:flex;
+  flex-direction:column;
+  height:calc(100vh - 100px);
+}
+
+section#backgrounds article {
+  border-top:5px solid white;
+  background:gray;
+  flex-grow:1;
+  background-image: url('../img/traffic.jpg');
+  }
+
+section#backgrounds article span {
+  background:black;
+  padding:5px;
+  color:white;
+  text-transform: uppercase;
+
+}
+
+.contain {
+  background-size:contain !important;
+}
+
+.cover {
+  background-size:cover !important;
+}
+
+.repeat {
+  background-repeat:no-repeat !important;
+}
+
+
+

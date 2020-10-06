@@ -1,0 +1,86 @@
+ /* 2020-09-09, Repetition surfing side index page*/
+
+body {
+    margin: 0px;
+    font-family: 'montserratregular';
+}
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../misc/monsterat-woff/montserrat-regular-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#index { /*FLEXBOX*/
+    display: grid;
+    height: 160vh;
+    width: 100%;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5.5fr 4fr 0.5fr;
+    grid-template-areas:
+    'main main'
+    'art1 art2'
+    'ft ft';
+}
+
+main {
+    background-image: url('../img/seefromthesky-unsplash.jpg');
+    background-position: center center;
+    background-size: cover;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 3fr 2fr;
+    grid-template-areas:
+    'hd hd'
+    'info info'
+    'div x';
+
+}
+
+header {
+    grid-area: hd;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.info {
+    margin-top: 50px;
+    grid-area: info;
+    padding: 20px
+}
+
+.div {
+    grid-area: div;
+    background-color: white;
+    width: 50%;
+    height: 50px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.art1 {
+    grid-area: art1;
+}
+
+.art2 {
+    grid-area: art2;
+}
+
+footer {
+    grid-area: ft;
+}
+.surfboard {
+    height: 40vh;
+    width: auto;
+}
+.logo {
+    width: 20%;
+    height: auto;
+    margin: 20px 20px;
+}
+
+b {
+    padding: 20px;
+}

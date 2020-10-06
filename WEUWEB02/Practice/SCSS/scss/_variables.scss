@@ -1,0 +1,18 @@
+$radius: .6rem;
+$cardWidth: 20rem;
+$mainBG: #eee;
+$cardBG: white;
+$shadow: 0 0 3rem rgba(0,0,0,.2);
+$cardRed: red;
+
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin resetMP {
+    margin: 0;
+    padding: 0;
+}

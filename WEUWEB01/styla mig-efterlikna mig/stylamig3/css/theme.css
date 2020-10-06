@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/* styla mig-efterlikna mig, 2019-09-30*/
+
+body {font-family:Arial, Helvetica, sans-serif;}
+
+h1 {
+  font-family:Arial, Helvetica, sans-serif;
+  text-transform:uppercase;
+}
+
+.p1 { font-family:Arial, Helvetica, sans-serif;}
+.p2 { font-family:"Times New Roman", Times, serif;}
+.p3 { font-family: Georgia, serif;}
+
+.p4 {
+  font-family: Georgia, serif;
+  font-weight:700;
+}
+
+.mitth {
+  text-align: center;
+  text-transform:uppercase;
+}
+
+.p5 {
+  font-family: Georgia, serif;
+  font-weight: 700;
+}
+
+.h3left {
+  	text-align:left;
+    color:red;
+}
+.h3middle { text-align:center;}
+.h3right {
+  	text-align:right;
+    color:red;
+}
+
+h2 { font-size:2em;}
+
+.p6 {
+  font-family:Arial, Helvetica, sans-serif;
+  letter-spacing:0.3em;
+}
+
+#green {
+  color: lime;
+  text-decoration:none;
+}
+
+
+/* Dessa har jag använt
+	font-family:Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, "Courier New", monospace;
+	font-size:100%;
+	text-align:center;
+	text-align:right;
+	color:red;
+	font-size:2em;
+	text-transform:uppercase;
+	font-family:Gill Sans, "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif
+	font-weight:700;
+	letter-spacing:0.3em;
+	line-height:2em;
+	color:green;
+	text-decoration:none;
+	color:red;
+	width:85em;
+	height:10em;
+	text-align:center;
+	text-decoration:overline underline;
+	width:3em;
+	height:3em;
+*/

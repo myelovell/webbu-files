@@ -1,0 +1,33 @@
+article {
+  height: 28rem;
+  width: 20rem;
+  background: white;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between; }
+  article aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    font-size: 1.6rem; }
+    article aside.top {
+      align-self: flex-start; }
+    article aside.bottom {
+      align-self: flex-end;
+      transform: rotateZ(180deg); }
+    article aside p {
+      margin: 0;
+      padding: 0; }
+      article aside p:nth-child(1) {
+        color: red; }
+  article h1 {
+    color: red;
+    font-size: 4rem; }
+
+/*# sourceMappingURL=_components.css.map */

@@ -1,0 +1,19 @@
+// #2020-10-01, scss
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../misc/monsterat-woff/montserrat-regular-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import 'variables';
+@import 'components';
+
+body {
+    // font-family: 'montserratregular';
+    background: $mainBG;
+    height: 97.5vh;
+    margin: 0;
+    @include center;
+
+
+}

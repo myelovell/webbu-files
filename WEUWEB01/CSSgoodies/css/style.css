@@ -1,0 +1,28 @@
+body {
+  margin:0;
+}
+
+nav {
+  background:lightgray;
+  height: 100px;
+  display:flex;
+  justify-content:center;
+}
+
+a,a:link {
+  color:darkgray;
+  text-decoration: none;
+  flex-grow:1;
+  display:flex;
+
+}
+
+
+a:hover {
+  color:black;
+  background-color:darkgray;
+}
+
+.center {
+  margin:auto;
+}

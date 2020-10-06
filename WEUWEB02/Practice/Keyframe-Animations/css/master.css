@@ -1,0 +1,38 @@
+/* 2020-09-24, key frame animations  */
+
+.aside {
+    width: 5rem;
+    height: 5rem;
+    background: green;
+    animation-name: slide;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slide {
+    0% {
+        background: red;
+        transform: translate3d(0px, 0px, 0px) rotateZ(0deg);
+    }
+    25% {
+        background: orange;
+        transform: translate3d(calc(90vw - 5rem), 0px, 0px) rotateZ(180deg);
+    }
+    50% {
+        background: yellow;
+        transform: translate3d(calc(90vw - 5rem), calc(90vh - 5rem), 0px) rotateZ(360deg);
+        /* filter: blur(5px); */
+    }
+    75% {
+        background: purple;
+        transform: translate3d(0px, calc(90vh - 5rem), 0px) rotateZ(540deg);
+    }
+    100% {
+        background: red;
+        transform: translate3d(0px, 0px, 0px) rotateZ(720deg);
+    }
+
+}

@@ -1,0 +1,46 @@
+`/*css grupprojekt, tofu meny*/
+#sidebar{
+    width: 60px;
+    height: 70px;
+    align-self: center;
+}
+
+.menu{
+    position: fixed;
+    height: 100vh;
+    width: 80vw;
+    top: 0;
+    left: -90vw;
+    background: orange;
+    transition: left 0.3s;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    z-index: 10;
+}
+
+#list{
+    list-style-type: none;
+    line-height: 7em;
+}
+
+.listtext{
+    font-size: 2em;
+}
+
+.fade-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(50,50,50,0.5);
+    display: none;
+    z-index: 5;
+}
+
+.visible{
+    display: block;
+}
+
+.show{
+    left: 0vw;
+}
