@@ -1,0 +1,105 @@
+// 2020-10-08, responsive poster webstore
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../misc/monsterat-woff/montserrat-regular-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import 'variables';
+
+body {
+    margin: 0;
+    font-family: 'montserratregular';
+    background: #eee;
+
+    header {
+        position: fixed;
+        width: 100%;
+
+        nav {
+            height: $baseline;
+            max-width: $maxWidth;
+            margin: 0 auto;
+            @include center;
+            justify-content: space-between;
+                img {
+                    &:nth-child(1) {
+                        height: 3rem;
+
+                    }
+                }
+        }
+    }
+
+    .hero {
+        background-color: #3de07e;
+        background-image: url('../img/char-12.png');
+        background-size: 24rem;
+        background-repeat: no-repeat;
+        background-position: center 300px;
+        height: $baseline * 10;
+        background-attachment: fixed;
+        @include center;
+
+        h1 {
+            font-size: 5rem;
+            color: $darkGrey;
+        }
+    }
+
+    main {
+        max-width: $maxWidth;
+        margin: 1rem auto;
+        @include grid;
+
+        article {
+            background: white;
+            box-shadow: 0 0 2rem rgba(0,0,0,.2);
+
+            img {
+                width: 100%;
+                height: $baseline * 4;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+        h2 {
+            padding: 1rem 1rem 0rem 1rem;
+            margin: 0;
+        }
+        p {
+            paddin: 0 1rem;
+            line-height: 140%;
+        }
+    }
+
+    footer {
+        background: rgba(0,0,0,.1);
+
+        .content {
+            max-width: $maxWidth;
+            margin: 0 auto;
+            height: $baseline * 6;
+            @include grid;
+        }
+        aside {
+            img {
+                width: 2rem;
+                margin: 0 0.5rem;
+            }
+            a {
+                color: #222;
+                text-decoration: none;
+                display: block;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    main, .content {
+        grid-template-columns: 1fr;
+    }
+}

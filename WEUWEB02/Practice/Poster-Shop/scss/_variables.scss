@@ -1,0 +1,16 @@
+
+$maxWidth: 1000px;
+$baseline: 4rem;
+$darkGrey: #222;
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
