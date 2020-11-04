@@ -1,0 +1,28 @@
+// 2020-10-15, coding a website following a figma template
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+// @include flex-center;
+
+@mixin flex-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+// @include flex-row;
+
+@mixin flex-column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+// @include flex-column;
+
+@mixin grid {
+    display: grid;
+    grid-template-rows: 2.9fr 4.8fr 2.3fr;
+    grid-gap: 1rem;
+    margin: 0;
+}

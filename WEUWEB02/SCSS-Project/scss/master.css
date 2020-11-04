@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'Fira Sans', sans-serif;
+  src: url("FiraSans-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  display: grid;
+  grid-template-rows: 2.9fr 4.8fr 2.3fr;
+  grid-gap: 1rem;
+  margin: 0;
+  font-family: 'Fira Sans', sans-serif; }
+  body header {
+    background-color: #EEEEEE;
+    justify-content: center;
+    align-items: center; }
+    body header nav {
+      font-size: 14px;
+      background-color: #EEEEEE;
+      position: fixed;
+      width: 100%; }
+      body header nav .menu {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around; }
+        body header nav .menu .menu1 {
+          align-self: center; }
+        body header nav .menu .navicon {
+          display: none; }
+      body header nav .GetAQuote-Button {
+        padding: 10px;
+        border-style: solid;
+        border-radius: 3px;
+        border-width: 1px;
+        border-color: black; }
+    body header .container {
+      margin-top: 10vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
+      body header .container p {
+        margin: 0vh 50vh 5vh 50vh;
+        color: #222222;
+        opacity: 80%;
+        text-align: center; }
+      body header .container .App {
+        display: flex;
+        align-items: center;
+        flex-direction: row; }
+        body header .container .App article {
+          margin: 0vh 2vh 5vh 0vh;
+          padding: 0.5vw 2vw 0.5vw 2vw;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          justify-content: space-around;
+          background-color: #222222;
+          border-radius: 6px;
+          width: 140px;
+          font-size: 12px;
+          color: white; }
+  body main {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    body main .articles {
+      display: flex;
+      align-items: center;
+      flex-direction: row; }
+      body main .articles .GreenCap, body main .articles .ZaraShirt, body main .articles .NikeAir, body main .articles .NerdTshirt {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 48vh;
+        width: 18vw;
+        margin: 5vh 1.8vh 5vh 1.8vh;
+        background-color: #EBEBEB;
+        border-radius: 3px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08); }
+    body main .Collection {
+      display: flex;
+      align-items: center;
+      flex-direction: row; }
+      body main .Collection article {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        margin: 5vh 1.8vh 5vh 1.8vh;
+        padding: 10px;
+        height: 40vh;
+        width: 36.6vw;
+        background: #343332;
+        border-radius: 3px; }
+        body main .Collection article h1 {
+          font-size: 32px; }
+        body main .Collection article .Collection-Button {
+          padding: 10px;
+          border-style: solid;
+          border-width: 1px;
+          border-radius: 3px;
+          border-color: rgba(255, 255, 255, 0.6); }
+  body footer {
+    background-image: url(../img/map.svg); }
+    body footer .ContactUs {
+      background-color: white;
+      padding: 10px 10px 10px 25px;
+      width: 26vw;
+      height: 50vh;
+      margin: 8vh 1.8vh 5vh 135vh; }
+      body footer .ContactUs h1 {
+        font-size: 32px; }
+      body footer .ContactUs .link {
+        display: flex;
+        align-items: center;
+        flex-direction: row; }
+        body footer .ContactUs .link img {
+          margin-right: 1vw;
+          font-size: 14px; }
+
+@media screen and (min-width: 400px) {
+  body header nav {
+    width: 10%; }
+    body header nav .menu {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between; }
+      body header nav .menu .menu1 {
+        display: none; }
+      body header nav .menu .navicon .logo {
+        display: block; }
+      body header nav .menu .GetAQuote-Button {
+        display: none; }
+  body main .articles .GreenCap, body main .articles .ZaraShirt, body main .articles .NikeAir, body main .articles .NerdTshirt {
+    display: flex;
+    align-items: center;
+    flex-direction: column; } }
+
+/*# sourceMappingURL=master.css.map */

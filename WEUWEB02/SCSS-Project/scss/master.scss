@@ -1,0 +1,192 @@
+// 2020-10-15, coding a website following a figma template
+@font-face {
+    font-family: 'Fira Sans', sans-serif;
+    src: url('FiraSans-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import 'variables';
+@import 'components';
+
+body {
+    @include grid;
+    font-family: 'Fira Sans', sans-serif;
+    header {
+        background-color: $light-grey;
+        justify-content: center;
+        align-items: center;
+        nav {
+            font-size: 14px;
+            background-color: $light-grey;
+            position: fixed;
+            width: 100%;
+            .menu {
+                @include flex-row;
+                justify-content: space-around;
+                .menu1 {
+                    align-self: center;
+                }
+                .navicon {
+                    display: none;
+                }
+            }
+            .GetAQuote-Button {
+                padding: 10px;
+                border-style: solid;
+                border-radius: 3px;
+                border-width: 1px;
+                border-color: black;
+            }
+        }
+        .container {
+            margin-top: 10vh;
+            @include flex-column;
+            p {
+                margin: 0vh 50vh 5vh 50vh;
+                color: $dark-grey;
+                opacity: 80%;
+                text-align: center;
+            }
+            .App {
+                @include flex-row;
+                article {
+                    margin: 0vh 2vh 5vh 0vh;
+                    padding: 0.5vw 2vw 0.5vw 2vw;
+                    @include flex-row;
+                    justify-content: space-around;
+                    background-color: $dark-grey;
+                    border-radius: 6px;
+                    width: 140px;
+                    font-size: 12px;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    main {
+        @include flex-column;
+        .articles {
+            @include flex-row;
+            .GreenCap, .ZaraShirt, .NikeAir, .NerdTshirt {
+                @include flex-column;
+                justify-content: space-around;
+                height: 48vh;
+                width: 18vw;
+                margin: $general-margin;
+                background-color: #EBEBEB;
+                border-radius: 3px;
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08);
+            }
+        }
+
+        .Collection {
+            @include flex-row;
+            article {
+                @include flex-column;
+                color: white;
+                margin: $general-margin;
+                padding: 10px;
+                height: 40vh;
+                width: 36.6vw;
+                background: #343332;
+                border-radius: 3px;
+                h1 {
+                    font-size: 32px;
+                }
+                .Collection-Button {
+                    padding: 10px;
+                    border-style: solid;
+                    border-width: 1px;
+                    border-radius: 3px;
+                    border-color: rgba(255, 255, 255, 0.6);
+                }
+            }
+        }
+    }
+
+    footer {
+        background-image: url(../img/map.svg);
+        .ContactUs {
+
+            background-color: white;
+            padding: 10px 10px 10px 25px;
+            width: 26vw;
+            height: 50vh;
+            margin: 8vh 1.8vh 5vh 135vh;
+            h1 {
+                font-size: 32px;
+            }
+            .link {
+                @include flex-row;
+                img {
+                    margin-right: 1vw;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+// Vet faktiskt inte hur man anpassar speciellt bra! nu är klockan 23:12 2020-10-20 och jag väljer att sova istället för att göra klart denna del
+@media screen and (min-width: 400px) {
+    body {
+        header {
+            nav {
+                width: 10%;
+                .menu {
+                    @include flex-row;
+                    justify-content: space-between;
+                    .menu1 {
+                        display: none;
+                    }
+                    .navicon .logo {
+                        display: block;
+                    }
+                    .GetAQuote-Button {
+                        display: none;
+                    }
+                }
+            }
+            .container {
+                .App {
+                    article {
+
+                    }
+                }
+            }
+        }
+
+        main {
+
+            .articles {
+                .GreenCap, .ZaraShirt, .NikeAir, .NerdTshirt {
+                    @include flex-column;
+                }
+            }
+
+            .Collection {
+                article {
+                    h1 {
+                    }
+                    .Collection-Button {
+                    }
+                }
+            }
+        }
+
+        footer {
+
+            .ContactUs {
+                h1 {
+                }
+                .link {
+                    img {
+
+                    }
+                }
+            }
+        }
+    }
+}

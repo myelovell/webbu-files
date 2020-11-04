@@ -1,0 +1,7 @@
+/* for font-weight: normal; use <p>, for font-weight: bold; use <h1> */
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('FiraSans-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
