@@ -1,0 +1,71 @@
+body {
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 97.5vh;
+  margin: 0;
+  perspective: 600px; }
+  body header {
+    height: 6rem;
+    width: 100%; }
+  body main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  body footer {
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body footer a {
+      margin: 0.5rem;
+      text-decoration: none;
+      color: black; }
+
+.card {
+  width: 20rem;
+  height: 28rem;
+  background: white;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: drop 1s ease-out forwards;
+  transform-style: preserve-3d; }
+@keyframes drop {
+  0% {
+    transform: translate3d(0, 0, 400px);
+    opacity: 0; }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+  .card aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: 1rem;
+    font-size: 1.6rem; }
+    .card aside.top {
+      align-self: flex-start; }
+    .card aside.bottom {
+      align-self: flex-end;
+      transform: rotateZ(180deg); }
+    .card aside p {
+      margin: 0;
+      padding: 0; }
+  .card h1 {
+    font-size: 5rem; }
+  .card.red .suit {
+    color: #de2d2d; }
+
+/*# sourceMappingURL=master.css.map */

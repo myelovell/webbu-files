@@ -1,0 +1,83 @@
+@import 'variables';
+
+body {
+    background: $mainBg;
+    @include center;
+    flex-direction: column;
+    height: 97.5vh;
+    margin: 0;
+    perspective: 600px;
+
+    header {
+        height: 6rem;
+        width: 100%;
+    }
+
+    main {
+        flex: 1;
+        width: 100%;
+        @include center;
+        flex-direction: column;
+    }
+
+    footer {
+        height: 6rem;
+        width: 100%;
+        @include center;
+        a {
+            margin: 0.5rem;
+            text-decoration: none;
+            color: black;
+
+        }
+    }
+}
+
+.card {
+    width: $cardWidth;
+    height: $cardWidth * 1.4;
+    background: $cardBg;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    @include center;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: drop 1s ease-out forwards;
+    transform-style: preserve-3d;
+
+    @keyframes drop {
+        0% {transform: translate3d(0, 0, 400px); opacity: 0;}
+        100% {transform: translate3d(0, 0, 0); opacity: 1;}
+    }
+
+    aside {
+        @include center;
+        flex-direction: column-reverse;
+        margin: 1rem;
+        font-size: 1.6rem;
+
+        &.top {
+            align-self: flex-start;
+        }
+
+        &.bottom {
+            align-self: flex-end;
+            transform: rotateZ(180deg);
+        }
+
+        p {
+            @include resetMp;
+        }
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    &.red {
+        .suit {
+
+            color: $cardRed;
+        }
+    }
+}
