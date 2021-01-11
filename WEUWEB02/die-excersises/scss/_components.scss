@@ -1,0 +1,30 @@
+// 2020-11-27, rollable die larger components scss document
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid {
+    display: grid;
+    grid-column: 1fr 3fr 1fr;
+    gap: 1rem;
+}
+
+@font-face {
+    font-family: 'Fira Sans', sans-serif;
+    src: url('FiraSans-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,79 @@
+<!-- 2020-11-27, rollable die html document -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="scss/master.css">
+        <title>Dice roll</title>
+    </head>
+    <body>
+        <aside class="score">
+            <p class="score">Score: <b>0</b></p>
+            <p class="attempts">Attempts left: <b>5</b></p>
+        </aside>
+
+        <article class="die"  onclick="diceRoll()">
+            <!-- 1 div -->
+            <aside class="side-1">
+                <div class="dot-1">⬤</div>
+            </aside>
+            <!-- 2 divs -->
+            <aside class="side-2">
+                <div class="dot-1">⬤</div>
+                <div class="dot-2">⬤</div>
+            </aside>
+            <!-- 3 divs -->
+            <aside class="side-3">
+                <div class="dot-1">⬤</div>
+                <div class="dot-2">⬤</div>
+                <div class="dot-3">⬤</div>
+            </aside>
+            <!-- 6 divs -->
+            <aside class="side-4">
+                <div class="dot-top">
+                    <div class="dot-1">⬤</div>
+                    <div class="dot-2">⬤</div>
+                </div>
+                <div class="dot-bottom">
+                    <div class="dot-3">⬤</div>
+                    <div class="dot-4">⬤</div>
+                </div>
+            </aside>
+            <!-- 7 divs -->
+            <aside class="side-5">
+                <div class="dot-top">
+                    <div class="dot-1">⬤</div>
+                    <div class="dot-2">⬤</div>
+                </div>
+                <div class="dot-3">⬤</div>
+                <div class="dot-bottom">
+                    <div class="dot-4">⬤</div>
+                    <div class="dot-5">⬤</div>
+                </div>
+            </aside>
+            <!-- 9 divs -->
+            <aside class="side-6">
+                <div class="dot-top">
+                    <div class="dot-1">⬤</div>
+                    <div class="dot-2">⬤</div>
+                </div>
+                <div class="dot-middle">
+                    <div class="dot-3">⬤</div>
+                    <div class="dot-4">⬤</div>
+                </div>
+                <div class="dot-bottom">
+                    <div class="dot-5">⬤</div>
+                    <div class="dot-6">⬤</div>
+                </div>
+            </aside>
+        </article>
+
+        <aside class="guess">
+            <a href="#" class="higher">higher</a>
+            <a href="#" class="same">the same</a>
+            <a href="#" class="lower">lower</a>
+        </aside>
+
+        <script src="script.js"></script>
+    </body>
+</html>

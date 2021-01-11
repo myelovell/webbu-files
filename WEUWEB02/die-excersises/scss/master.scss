@@ -1,0 +1,108 @@
+// 2020-11-27, rollable die master scss document
+@import 'variables';
+@import 'components';
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    height: 100vh;
+    @include center;
+    perspective: 600px;
+    background-color: #363636;
+    text-decoration: none;
+    transform: rotateY("0deg") rotateX("90deg");
+    .score {
+        margin-right: 20%;
+        p {
+            background: $bgColor;
+            padding: 15px 40px 15px 40px;
+            width: 140px;
+            text-align: center;
+            border-radius: 8px;
+            border: 1px solid #BFBFBF;
+            box-shadow: 10px 10px 5px black;
+
+        }
+    }
+    .die {
+        width: 20rem;
+        height: 20rem;
+        animation: 5s ease-in;
+        transform-style: preserve-3d;
+
+        aside {
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            @include center;
+            font-size: 4rem;
+            border-radius: 8%;
+            box-shadow: 0 0 50px #bababa inset;
+            div {
+                text-shadow: 0 0 15px black, 1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 -1.5px white;
+                color: black;
+            }
+
+        }
+        .side-1 {
+            background: $bgColor;
+            transform: translate3d(-50%,0,0) rotateY(90deg);
+        }
+        .side-2 {
+            background: $bgColor;
+            transform: translate3d(50%,0,0) rotateY(-90deg);
+            @include column;
+            .dot-1 {margin-right: 50%; padding-bottom: 25%;}
+            .dot-2 {margin-left: 50%;}
+        }
+        .side-3 {
+            background: $bgColor;
+            transform: translate3d(0,50%,0) rotateX(-90deg);
+            @include column;
+            .dot-1 {margin-right: 50%;}
+            .dot-3 {margin-left: 50%;}
+        }
+        .side-4 {
+            background: $bgColor;
+            transform: translate3d(0,-50%,0) rotateX(90deg);
+            @include row;
+            .dot-top {padding-right: 25%;}
+            .dot-3 {padding-bottom: $paddingBottomMedium;}
+            .dot-1 {padding-bottom: $paddingBottomMedium;}
+        }
+        .side-5 {
+            background: $bgColor;
+            transform: translate3d(0,0,10rem);
+            .dot-top {margin-right: $marginRight;}
+            .dot-1 {padding-bottom: $paddingBottomLow;}
+            .dot-bottom {margin-left: $marginLeft;}
+            .dot-4 {padding-bottom: $paddingBottomLow;}
+        }
+        .side-6 {
+            background: $bgColor;
+            transform: translate3d(0,0,-10rem);
+            .dot-top {margin-right: $marginRight;}
+            .dot-1 {padding-bottom: $paddingBottomLow;}
+            .dot-3 {padding-bottom: $paddingBottomLow;}
+            .dot-bottom {margin-left: $marginLeft;}
+            .dot-5 {padding-bottom: $paddingBottomLow;}
+        }
+    }
+    .guess {
+        margin-left: 20%;
+        a {
+            @include column;
+            margin: 15px;
+            padding: 15px 40px 15px 40px;
+            width: 140px;
+            text-decoration: none;
+            text-align: center;
+            color: black;
+            background: $bgColor;
+            border-radius: 8px;
+            border: 1px solid #BFBFBF;
+            box-shadow: 10px 10px 5px black;
+        }
+    }
+}
