@@ -1,7 +1,6 @@
 // 2020-11-27, rollable die js document
 
-let startPosition = `rotateX(0deg) rotateY(0deg)`,
-    currentPosition = null,
+let currentPosition = null,
     totalScore = 0,
     attempts = 5;
 
@@ -16,44 +15,84 @@ function diceRoll() {
     newPosition = `rotateX(${rotationX+'deg'}) rotateY(${rotationY+'deg'})`;
 
 
-    prevPosition = currentPosition;
-    currentPosition = newPosition;
+    prevPosition = currentPosition; //previous position
+    currentPosition = newPosition; //current position
 
     let rotationEl = document.querySelector('.die');
 
-    rotationEl.style.transform = startPosition
+    rotationEl.style.transform = //prevPosition `rotateX(${-rotationX+'deg'}) rotateY(${-rotationY+'deg'})`
     rotationEl.style.transitionDuration = "2s"
 
     rotationEl.style.transform = newPosition
     rotationEl.style.transitionDuration = "2s"
+    prevFrontSide()
+    prevFrontSide()
 }
 
 
-function frontSide() {
-    if (newPosition == `rotateX(180deg) rotateY(0deg)` || newPosition == `rotateX(0deg) rotateY(180deg)`){
-        value = 6
+function prevFrontSide() {
+    if (prevPosition == `rotateX(180deg) rotateY(0deg)`){
+        prevValue = "6"
     }
-    if (newPosition == `rotateX(180deg) rotateY(180deg)` || newPosition == `rotateX(0deg) rotateY(0deg)`){
-        value = 5
+    if (prevPosition == `rotateX(0deg) rotateY(180deg)`) {
+        prevValue = "6"
     }
-    if (newPosition == `rotateX(270deg) rotateY(0deg)` || newPosition == `rotateX(90deg) rotateY(180deg)`){
-        value = 4
+
+    if (prevPosition == `rotateX(180deg) rotateY(180deg)`){
+        prevValue = "5"
     }
-    if (newPosition == `rotateX(90deg) rotateY(0deg)` || newPosition == `rotateX(270deg) rotateY(180deg)`){
-        value = 3
+    if (prevPosition == `rotateX(0deg) rotateY(0deg)`){
+        prevValue = "5"
     }
-    if (newPosition == `rotateX(0deg) rotateY(270deg)` || newPosition == `rotateX(90deg) rotateY(270deg)` || newPosition == `rotateX(180deg) rotateY(270deg)` || newPosition == `rotateX(270deg) rotateY(270deg)`){
-        value = 2
+
+    if (prevPosition == `rotateX(270deg) rotateY(0deg)`){
+        prevValue = "4"
     }
-    if (newPosition == `rotateX(180deg) rotateY(90deg)` || newPosition == `rotateX(270deg) rotateY(90deg)` || newPosition == `rotateX(0deg) rotateY(90deg)` || newPosition == `rotateX(90deg) rotateY(90deg)`){
-        value = 1
+    if (prevPosition == `rotateX(90deg) rotateY(180deg)`){
+        prevValue = "4"
+    }
+
+    if (prevPosition == `rotateX(90deg) rotateY(0deg)`){
+        prevValue = "3"
+    }
+    if (prevPosition == `rotateX(270deg) rotateY(180deg)`) {
+        prevValue = "3"
+    }
+    
+    if (prevPosition == `rotateX(0deg) rotateY(270deg)` || prevPosition == `rotateX(90deg) rotateY(270deg)` || prevPosition == `rotateX(180deg) rotateY(270deg)` || prevPosition == `rotateX(270deg) rotateY(270deg)`){
+        prevValue = "2"
+    }
+    if (prevPosition == `rotateX(180deg) rotateY(90deg)` || prevPosition == `rotateX(270deg) rotateY(90deg)` || prevPosition == `rotateX(0deg) rotateY(90deg)` || prevPosition == `rotateX(90deg) rotateY(90deg)`){
+        prevValue = "1"
     }
 }
+
+function prevFrontSide() {
+    if (currentPosition == `rotateX(180deg) rotateY(0deg)` || currentPosition == `rotateX(0deg) rotateY(180deg)`){
+        currentValue = "6"
+    }
+    if (currentPosition == `rotateX(180deg) rotateY(180deg)` || currentPosition == `rotateX(0deg) rotateY(0deg)`){
+        currentValue = "5"
+    }
+    if (currentPosition == `rotateX(270deg) rotateY(0deg)` || currentPosition == `rotateX(90deg) rotateY(180deg)`){
+        currentValue = "4"
+    }
+    if (currentPosition == `rotateX(90deg) rotateY(0deg)` || currentPosition == `rotateX(270deg) rotateY(180deg)`){
+        currentValue = "3"
+    }
+    if (currentPosition == `rotateX(0deg) rotateY(270deg)` || currentPosition == `rotateX(90deg) rotateY(270deg)` || currentPosition == `rotateX(180deg) rotateY(270deg)` || currentPosition == `rotateX(270deg) rotateY(270deg)`){
+        currentValue = "2"
+    }
+    if (currentPosition == `rotateX(180deg) rotateY(90deg)` || currentPosition == `rotateX(270deg) rotateY(90deg)` || currentPosition == `rotateX(0deg) rotateY(90deg)` || currentPosition == `rotateX(90deg) rotateY(90deg)`){
+        currentValue = "1"
+    }
+}
+
 
 document.querySelector(".lower").addEventListener("click", () => {
     diceRoll()
 
-    if(currentPosition < prevPosition) { //EDIT SAME VALUE
+    if(currentValue < prevValue) { //EDIT SAME prevValue
         updateScore(100)
     } else {
         updateScore(-100)
@@ -64,7 +103,7 @@ document.querySelector(".lower").addEventListener("click", () => {
 document.querySelector(".same").addEventListener("click", () => {
     diceRoll()
 
-    if(currentPosition === prevPosition) { //EDIT SAME VALUE
+    if(currentValue === prevValue) { //EDIT SAME prevValue
         updateScore(1000)
     } else {
         updateScore(-100)
@@ -75,7 +114,7 @@ document.querySelector(".same").addEventListener("click", () => {
 document.querySelector(".higher").addEventListener("click", () => {
     diceRoll()
 
-    if(currentPosition > prevPosition) { //EDIT SAME VALUE
+    if(currentValue > prevValue) { //EDIT SAME prevValue
         updateScore(100)
     } else {
         updateScore(-100)
