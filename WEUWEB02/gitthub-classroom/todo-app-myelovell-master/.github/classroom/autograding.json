@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Cypress auto test",
+      "setup": "",
+      "run": "npx concurrently --success first --kill-others \"npx cypress run\" \"npx serve\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": null
+    }
+  ]
+}

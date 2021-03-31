@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Awesome Todo App ( better then WSP )</title>
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+<body>
+    <main id="app">
+        <header>
+            <input type="text" placeholder="Add a new task" v-model="text" v-on:keyup.enter="addTodo"/>
+            <a href="#" class="btn" v-on:click="addTodo">
+                <img src="img/add.svg" alt="add">
+            </a>
+        </header>
+        <section class="todos">
+            <article class="todo"  v-for="todo in todos" v-bind:class="{ done: todo.done }">
+                <input type="checkbox" v-model="todo.done">
+                <span>{{ todo.text }}</span>
+            </article>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

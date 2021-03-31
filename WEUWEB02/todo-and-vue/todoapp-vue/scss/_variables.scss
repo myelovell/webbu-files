@@ -1,0 +1,11 @@
+/* COLORS */
+$darkGrey: #2E2E2E;
+$lightGrey: #EEEEEE;
+$green: #3FC08A;
+
+/* MIXINS */
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

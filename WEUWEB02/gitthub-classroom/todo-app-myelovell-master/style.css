@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+#app {
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.4;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #32485F;
+}
+
+h1 {
+    text-align: center;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.item > li {
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+}
+
+.input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #32485F;
+    flex: 1;
+}

@@ -1,0 +1,69 @@
+@import './variables';
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    @include center;
+    font-family: 'PT Sans', sans-serif;
+    background: $lightGrey;
+
+    #app {
+        max-width: 350px;
+        width: 100%;
+        box-shadow: 0 0 3rem rgba($color: #000000, $alpha: .1);
+
+        header {
+            display: flex;
+
+            input {
+                flex: 1;
+                padding: .5rem;
+                font-size: 1.4rem;
+                border: none;
+                background: $darkGrey;
+                color: white;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            a {
+                &.btn {
+                    width: 3rem;
+                    height: 3rem;
+                    background: $green;
+                    @include center;
+                }
+            }
+        }
+        .todos {
+            background: white;
+
+            .todo {
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                font-size: 1.4rem;
+                border-bottom: 1px solid rgba($color: $darkGrey, $alpha: .2);
+                transition: .2s ease;
+                
+                &.done {
+                    opacity: .4;
+
+                    span {
+                        text-decoration: line-through;
+                    }
+                }
+
+                input {
+                    margin: 0 1rem 0 0;
+                    width: 1.4rem;
+                    height: 1.4rem;
+                }
+            }
+        }
+    }
+}

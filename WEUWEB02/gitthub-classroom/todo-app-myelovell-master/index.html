@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js todo app</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link href="style.css" rel="stylesheet" type="text/css"> 
+</head>
+<body>
+    <div id="app">
+        <h1>Todo App WU2!</h1>
+        <input type="text" placeholder="Sök..">
+        <br>
+        <input data-cy="show" type="checkbox">Visa alla</input>
+        <hr>
+        <div class="flex">
+            <input data-cy="todo" class="input" type="text" placeholder="skriv något här...">
+            <button data-cy="add">+</button>        
+        </div>
+        <ul>
+            <!-- lägg till v-for och skicka props till item komponenten -->
+            <item></item>
+        </ul>        
+    </div>
+</body>
+<template id="item-template">
+    <div class="item">
+        <li>Interpolera text här</li>
+        <button data-cy="del">✗</button>
+        <button data-cy="mark">✓</button>
+    </div>
+</template>
+<script src="index.js"></script>
+</html>
